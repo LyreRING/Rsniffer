@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>771</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+    background-color: rgb(240,240,240); /*背景色*/
+    color: black;  /*字体颜色*/
+}</string>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>751</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget
+{
+    background-color: rgb(240,240,240); /*背景色*/
+    color: black;/*字体颜色*/
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_rule">
+     <attribute name="title">
+      <string>Rules Filter</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_rule">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>621</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget{
+    background-color: rgb(240,240,240); /*背景色*/
+    color: black;/*字体颜色*/
+    selection-background-color:rgba(192,221,244);/*背景色*/;/*点击选中颜色*/
+    border:1px solid #E0DDDC;/*边框为1像素，灰色*/
+    gridline-color:lightgray;/*这个是表格的格子线的颜色，为亮灰*/
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>98</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>90</y>
+        <width>98</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="apply_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>170</y>
+        <width>98</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Apply</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>290</y>
+        <width>121</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid #E0DDDC;/*边框为1像素，灰色*/</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+    color: black;/*字体颜色*/
+	font: 63 10pt &quot;URW Bookman&quot;;
+border:none;/*边框样式*/
+}</string>
+       </property>
+       <property name="text">
+        <string>Log by Default:</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="accept_radioButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;/*边框样式*/</string>
+       </property>
+       <property name="text">
+        <string>Yes</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="reject_radioButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;/*边框样式*/</string>
+       </property>
+       <property name="text">
+        <string>No</string>
+       </property>
+      </widget>
+      <zorder>label_3</zorder>
+      <zorder>reject_radioButton</zorder>
+      <zorder>accept_radioButton</zorder>
+     </widget>
+     <widget class="QPushButton" name="clear_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>130</y>
+        <width>98</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_rcfg">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>14</y>
+        <width>391</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="load_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>10</y>
+        <width>98</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Load</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="save_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>10</y>
+        <width>98</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="select_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+   
+    border-style:none;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:none;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Configuration</string>
+      </property>
+     </widget>
+     <zorder>frame_2</zorder>
+     <zorder>tableWidget_rule</zorder>
+     <zorder>add_pushButton</zorder>
+     <zorder>delete_pushButton</zorder>
+     <zorder>apply_pushButton</zorder>
+     <zorder>clear_pushButton</zorder>
+     <zorder>lineEdit_rcfg</zorder>
+     <zorder>load_pushButton</zorder>
+     <zorder>save_pushButton</zorder>
+     <zorder>select_pushButton</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_log">
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+    background-color: rgb(240,240,240); /*背景色*/
+    color: black;  /*字体颜色*/
+}</string>
+     </property>
+     <attribute name="title">
+      <string>Capture Results</string>
+     </attribute>
+     <widget class="QPushButton" name="savelog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>10</y>
+        <width>98</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:0px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearlog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>10</y>
+        <width>98</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:0px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="flashlog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>10</y>
+        <width>98</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:0px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Flash</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadlog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>10</y>
+        <width>98</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:0px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Load</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_logs">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>731</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="detailslog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>350</y>
+        <width>98</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Details</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="datalog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>310</y>
+        <width>98</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+    background-color:rgba(198,198,198);/*背景色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:10px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    font-size:12pt;/*字体 字体大小*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:6px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    background-color:rgba(198,198,220);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:solid;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Data</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_logs">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>621</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Monospace&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="selectlog_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+   
+    border-style:none;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    border-radius:5px;/*边框圆角半径像素*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+	font: 63 11pt &quot;URW Bookman&quot;;
+    color: black;/*字体颜色*/
+    padding:0px; /*填衬*/
+}
+/*鼠标按下状态*/
+QPushButton:pressed
+{
+    border-color:rgba(205,205,205);/*边框颜色*/
+    border-style:none;/*边框样式 solid实线 none无边框 inset/outset 3D边框*/
+    color: black;/*字体颜色*/
+}
+/*鼠标悬停状态*/
+QPushButton:hover
+{
+    background-color:rgba(198,198,190);/*背景色*/
+    border-color:rgba(205,205,205);/*边框颜色*/
+    color: black;/*字体颜色*/
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Log</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_lcfg">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>241</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>771</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
